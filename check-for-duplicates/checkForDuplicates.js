@@ -14,3 +14,6 @@ const checkForDuplicates = (array) => {
 
 // Do not change this line or the function name
 module.exports = checkForDuplicates;
+
+// run this line in the terminal to check your answer
+// npm test ./check-for-duplicates/checkForDuplicates.test.js
