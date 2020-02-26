@@ -14,6 +14,18 @@ You'll find each day's toy problem in its own folder.
 If you haven't already, fork the repository on GitHub and clone your newly created
 repo down to your computer.
 
+## First Step
+
+Open your terminal and have it pointing to your bld09-precourse-toy-problem folder then run:
+> npm install
+
+## Checking Answers
+
+After completing a toy problem run:
+> npm test ./current-toy-problem-folder/currentToyProblem.test.js
+
+Alternatively you can run npm test **but** it will run **ALL** tests. 
+
 ## Updating the Repository
 
 Every morning, when a new toy problem is added, you'll need to sync your version of

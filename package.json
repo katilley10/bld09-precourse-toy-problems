@@ -1,0 +1,23 @@
+{
+  "name": "bld09-precourse-toy-problems",
+  "version": "1.0.0",
+  "description": "Welcome to Toy Problems. This repository will be updated every morning with a new code challenge.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BaileyTheriault/bld09-precourse-toy-problems.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BaileyTheriault/bld09-precourse-toy-problems/issues"
+  },
+  "homepage": "https://github.com/BaileyTheriault/bld09-precourse-toy-problems#readme",
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}

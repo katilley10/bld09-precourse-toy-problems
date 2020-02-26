@@ -11,3 +11,6 @@
 const checkForDuplicates = (array) => {
 
 };
+
+// Do not change this line or the function name
+module.exports = checkForDuplicates;
