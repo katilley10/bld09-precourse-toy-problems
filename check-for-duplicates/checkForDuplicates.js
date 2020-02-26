@@ -5,7 +5,7 @@
   checkForDuplicates([1, 2, 3, 4]) => returns false
   checkForDuplicates([1, 3, 4, 1]) => returns true
   checkForDuplicates(['yes', 'no']) => returns false
-  checkForDuplciates(['yes', 'yes']) => returns true
+  checkForDuplicates(['yes', 'yes']) => returns true
 */
 
 const checkForDuplicates = (array) => {
