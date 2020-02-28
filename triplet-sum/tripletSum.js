@@ -7,12 +7,12 @@
 */
 
 const tripletSum = (array) => {
-  array.sort();
+  array.sort(function(a,b) {return a-b;});
   let bigNumbers = [];
 
-  for (let i = array.length -1; i >= 0; i--) {
-    if (bigNumbers.indexOf(array[i]) === -1 && bigNumbers.length  !== 3) {
-      bigNumbers.push(array[i]);
+for (let i = array.length -1; i >= 0; i--) {
+  if (bigNumbers.indexOf(array[i]) === -1 && bigNumbers.length  !== 3) {
+    bigNumbers.push(array[i]);
     }
   }
   return bigNumbers[0] + bigNumbers[1] + bigNumbers[2];
