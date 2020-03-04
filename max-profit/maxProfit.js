@@ -16,7 +16,17 @@
 */
 
 const maxProfit = (array) => {
-
+  let sortArr = array.sort((a, b) => a - b);
+  let answers = [];
+  for (var i = 0; i < array.length; i++) {  
+    if (array.indexOf(sortArr[i + 1]) < (array.length - 1)) {
+      let downArr = sortArr.slice(i).reverse();
+      let temp = downArr[downArr.length - 1] - sortArr[i]
+      answers.push(temp);
+      answers.sort((a,b) => b-a);
+    }
+  }
+  return answers[0];
 };
 
 //Do not change this line or the function name
