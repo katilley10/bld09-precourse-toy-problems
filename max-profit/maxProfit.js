@@ -16,18 +16,20 @@
 */
 
 const maxProfit = (array) => {
-  let sortArr = array.sort((a, b) => a - b);
-  let answers = [];
+  let answer = 0;
   for (var i = 0; i < array.length; i++) {  
-    if (array.indexOf(sortArr[i + 1]) < (array.length - 1)) {
-      let downArr = sortArr.slice(i).reverse();
-      let temp = downArr[downArr.length - 1] - sortArr[i]
-      answers.push(temp);
-      answers.sort((a,b) => b-a);
+    let currArr = array.slice(i+1);
+    let min = Math.min(...currArr);
+    let max = Math.max(...currArr);
+    if (answer === 0) {
+      answer = max - min;
+    } else if ((max - min) > answer) {
+      answer = max - min;
     }
   }
-  return answers[0];
+  return answer;
 };
+
 
 //Do not change this line or the function name
 module.exports = maxProfit;
