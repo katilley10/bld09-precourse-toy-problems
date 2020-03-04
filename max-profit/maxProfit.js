@@ -19,12 +19,9 @@ const maxProfit = (array) => {
   let answer = 0;
   for (var i = 0; i < array.length; i++) {  
     let currArr = array.slice(i+1);
-    let min = Math.min(...currArr);
     let max = Math.max(...currArr);
-    if (answer === 0) {
-      answer = max - min;
-    } else if ((max - min) > answer) {
-      answer = max - min;
+      if ((max - array[i]) > answer) {
+      answer = max - array[i];
     }
   }
   return answer;
