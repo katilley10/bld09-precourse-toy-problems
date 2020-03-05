@@ -10,8 +10,8 @@
 const rotateMatrix = (matrix) => {
     let result = [];
     for (var i = 0; i < 3; i ++) {
-      let temp = [];
-        for (let j = 2; j >= 0; j--) {
+      var temp = [];
+        for (var j = 2; j >= 0; j--) {
           temp.push(matrix[j][i]);
           if (j === 0){
             result.push(temp);
