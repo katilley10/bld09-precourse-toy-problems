@@ -8,7 +8,15 @@
 */
 
 const rotateMatrix = (matrix) => {
-
+    let result = [];
+    for (var i = 0; i < 3; i ++) {
+        for (let j = 2; j >= 0; j--) {
+          let temp = [];
+          temp.push(matrix[j][i])
+        }
+        result.push(temp);
+    }
+  return result; 
 };
 
 //Do not change this line or function name
