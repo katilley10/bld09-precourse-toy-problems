@@ -7,7 +7,14 @@
 */
 
 const removeVowels = (string) => {
-
+  let vowels = ['a','e','i','o','u','y'];
+  let result = [];
+  for (var i = 0; i < string.length; i++) {
+    if (indexOf(string[i].toLowerCase()) === -1) {
+      result.push(string[i]);
+    })
+  }
+  return result.join('');
 };
 
 //Do not change this line or the function name
