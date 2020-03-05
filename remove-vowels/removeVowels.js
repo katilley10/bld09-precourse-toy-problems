@@ -12,7 +12,7 @@ const removeVowels = (string) => {
   for (var i = 0; i < string.length; i++) {
     if (indexOf(string[i].toLowerCase()) === -1) {
       result.push(string[i]);
-    })
+    }
   }
   return result.join('');
 };
