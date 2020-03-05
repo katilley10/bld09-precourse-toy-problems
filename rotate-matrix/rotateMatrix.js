@@ -9,9 +9,9 @@
 
 const rotateMatrix = (matrix) => {
     let result = [];
-    for (var i = 0; i < 3; i ++) {
+    for (var i = 0; i < matrix.length; i ++) {
       var temp = [];
-        for (var j = 2; j >= 0; j--) {
+        for (var j = matrix[i].length - 1; j >= 0; j--) {
           temp.push(matrix[j][i]);
           if (j === 0){
             result.push(temp);
