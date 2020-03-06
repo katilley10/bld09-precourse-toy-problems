@@ -23,11 +23,13 @@ const oddInteger = (array) => {
     }
     for (let i in counts) {
         if (counts[i] % 2 !== 0) {
-            result.push(i);
+            result.push(parseInt(i));
         }
     }
-  return result.sort((a,b) => a - b);
+  return (result.length === 1) ? result[0] : result.sort((a,b) => a - b);
 };
+
+oddInteger([5, 4, 3, 2, 1])
 
 //Do not change this line or the function name
 module.exports = oddInteger;
