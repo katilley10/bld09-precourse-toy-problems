@@ -12,7 +12,21 @@
 */
 
 const oddInteger = (array) => {
-
+    let result = [];
+    let counts = {};
+    for (let i = 0; i < array.length; i++) {
+      if (counts[array[i]] === undefined) {
+        counts[array[i]] = 1;
+      } else if (counts[array[i]] !== undefined) {
+          counts[array[i]] ++;
+      }
+    }
+    for (let i in counts) {
+        if (counts[i] % 2 !== 0) {
+            result.push(counts[i]);
+        }
+    }
+  return result.sort((a,b) => a - b);
 };
 
 //Do not change this line or the function name
