@@ -23,7 +23,7 @@ const oddInteger = (array) => {
     }
     for (let i in counts) {
         if (counts[i] % 2 !== 0) {
-            result.push(counts[i]);
+            result.push(i);
         }
     }
   return result.sort((a,b) => a - b);
