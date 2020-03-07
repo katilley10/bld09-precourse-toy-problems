@@ -8,7 +8,15 @@
 */
 
 const camelCase = (string) => {
-
+  let result = '';
+  for (let i = 0; i < string.length; i++) {
+    if (string[i].toLowerCase() === string[i]) {
+      result.concat(string[i]);
+  } else if (string[i].toLowerCase() !== string[i]) {
+      result.concat(' ',string[i]);
+    }
+  }
+  return result;
 };
 
 //Do not change this line or the function name
