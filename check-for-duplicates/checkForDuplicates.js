@@ -9,7 +9,12 @@
 */
 
 const checkForDuplicates = (array) => {
-
+  for (let i = 0; i < array.length; i ++) {
+    if (array.slice(i+1).indexOf(array[i]) > -1) {
+      return true;
+    }
+  }
+  return false;
 };
 
 // Do not change this line or the function name
