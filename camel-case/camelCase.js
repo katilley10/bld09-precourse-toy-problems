@@ -12,8 +12,10 @@ const camelCase = (string) => {
   for (let i = 0; i < string.length; i++) {
     if (string[i].toLowerCase() === string[i]) {
       result += string[i];
-  } else if (string[i].toLowerCase() !== string[i]) {
+    } else if (string[i].toLowerCase() !== string[i] && i !== 0) {
       result += (' ' + string[i]);
+    } else if (string[i].toLowerCase() !== string[i] && i === 0) {
+      result += string[i];
     }
   }
   return result;
