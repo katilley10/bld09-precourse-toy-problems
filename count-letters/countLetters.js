@@ -10,7 +10,23 @@
 
 
 const countLetters = (string) => {
-
+  let result = {};
+  let stringResult = '';
+  const numbers = ['0','1','2','3','4','5','6','7','8','9'];
+  for (let i = 0; i < string.length; i++) {
+    if (result[string[i].toLowerCase()] === undefined && string[i] !== ' ' && numbers.indexOf(string[i]) === -1) {
+      result[string[i].toLowerCase()] = 1;
+    } else if (result[string[i].toLowerCase()] >= 1 && string[i] !== ' ' && numbers.indexOf(string[i]) === -1) {
+      result[string[i].toLowerCase()] ++;
+    }
+  }
+  for (let [key, value] of Object.entries(result)) {
+    stringResult += (key + ':' + value);
+    if (key !== Object.keys(result)[Object.keys(result).length -1]) {
+      stringResult += ' ';
+    }
+  }
+  return stringResult;
 };
 
 //Do not change this line or the function name
