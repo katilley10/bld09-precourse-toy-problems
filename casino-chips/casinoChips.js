@@ -17,9 +17,11 @@ const casinoChips = (chips) => {
         chips[0]--;
         if (chips[1] > 0) {
             chips[1]--;
+            chips.sort((a,b) => b-a);
             return 1 + casinoChips(chips);
         } else if (chips[2] > 0) {
             chips[2]--;
+            chips.sort((a,b)=> b-a);
             return 1 + casinoChips(chips);
         }
     } else if (chips[1] > 0 && chips[2] > 0) {
