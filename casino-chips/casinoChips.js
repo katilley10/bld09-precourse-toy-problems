@@ -13,6 +13,22 @@
 */
 
 const casinoChips = (chips) => {
+    if (chips[0] > 1) {
+        chips[0]--;
+        if (chips[1] > 1) {
+            chips[1]--;
+            return 1 + casinoChips(chips);
+        } else if (chips[2] > 1) {
+            chips[2]--;
+            return 1 + casinoChips(chips);
+        }
+    } else if (chips[1] > 1) {
+        chips[1]--;
+        if (chips[2] > 1) {
+            chips[2]--;
+            return 1 + casinoChips(chips);
+        }
+    }
 
 };
 
